@@ -1,68 +1,94 @@
+
 body {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    /* justify-content: center; */
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: #13293d;
-    color: #fff;
-  }
-  
-  h1 {
-    font-size: 250%;
-  }
-  
-  h2 {
-    margin: 2% 0;
-    font-size: 250%;
-  }
-  /* Nav Bar */
-  nav {
-    display: flex;
-    background-color: #d8a47f;
-  }
-  
-  nav a {
-    color: #13293d;
-    padding: 14px 20px;
-    font-size: 150%;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  
-  nav a:hover {
-    color: #fff;
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  background-color: #e2f4eb;
+}
+header {
+  padding: 20px;
+  background-color: #394867;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+
+
+
+/* Nav Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  background-color: #484848;
+}
+
+li {
+  float: right;
+  font-size: large;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #b9c6ae ;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
 main {
-    display: flex;
-    flex: 1 1 0;
-    max-width: 96%;
-    margin: 2% auto;
+  display: flex;
+}
+/* side bar */
+aside {
+  flex: 30%;
+  background-color: #b9c6ae;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+section {
+  flex: 70%;
+  background-color: #fff;
+  padding: 20px;
+}
+/* footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background:  #394867;
+  color: #fff;
+}
+
+/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  header {
+    background: #9d3d30;
   }
-  
-  article {
-    border-bottom: 1px solid #13293d;
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;
   }
-  
-  article p {
-    margin: 2% 0;
-    font-size: 110%;
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;
   }
-  
-  article {
-    border-bottom: 1px solid #13293d;
-  }
-  
-  article p {
-    margin: 2% 0;
-    font-size: 110%;
-  }
+}
